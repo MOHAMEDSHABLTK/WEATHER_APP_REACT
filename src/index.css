@@ -12,27 +12,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #333; /* Added a background color for better contrast */
 }
 
 p {
   font-size: 1.6rem;
+  color: #fff; /* Changed paragraph text color to white */
 }
 
 h1 {
   font-size: 6rem;
+  color: #fff; /* Changed heading text color to white */
 }
 
 .app {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Changed height to min-height for smaller content */
   position: relative;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
 
 .app:before {
   content: '';
-  background: url('./assets/sunset.jpg') no-repeat center center/cover;
+  background: url('./assets/back.jpg') no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -43,16 +50,17 @@ h1 {
 
 .app .search {
   text-align: center;
-  padding: 1rem;
+  margin-bottom: 2rem; /* Added margin bottom for spacing */
 }
 
 .app input {
   padding: .7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
-  border: 1px solid rgba(255,255,255, 0.8);
-  background: rgba(255,255,255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
   color: #f8f8f8;
+  width: 300px; /* Adjusted input width */
 }
 
 ::placeholder {
@@ -61,26 +69,24 @@ h1 {
 
 .container {
   max-width: 700px;
-  height: 700px;
-  margin: auto;
-  padding: 0 1rem;
+  height: auto; /* Changed height to auto for dynamic content */
+  margin: 1rem;
+  padding: 1rem;
   position: relative;
-  top: 10%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column; /* Align children vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
 }
 
 .app .top {
   width: 100%;
-  margin: 1rem auto;
+  margin-bottom: 1rem; /* Added margin bottom for spacing */
+  text-align: center; /* Center text */
 }
 
 .app .description {
-  position: relative;
-  right: -90%;
-  transform-origin: 0 0;
-  transform: rotate(269deg);
+  margin-left: auto; /* Adjusted position for description */
 }
 
 .app .bottom {
@@ -88,18 +94,22 @@ h1 {
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  margin: 1rem auto;
-  padding: 1rem;
-  border-radius: 12px;
-  background-color: rgba(255,255,255, 0.2);
+  margin: 2rem auto; /* Adjusted margin for spacing */
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: rgba(124, 145, 160, 0.730);
+}
+.app .bottom > div {
+  flex: 1; /* Allow each child to take equal space */
+}
+
+.app .bottom > div:not(:last-child) {
+  margin-right: 1rem; /* Add right margin to each child except the last one */
 }
 
 .bold {
   font-weight: 700;
 }
-
-
-
 
 
 
